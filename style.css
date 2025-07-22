@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 20px;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+h1, h2 {
+    color: #0056b3;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section, .card-preview {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group input[type="file"],
+.input-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.student-card {
+    width: 350px; /* Kích thước thẻ sinh viên tiêu chuẩn */
+    height: 220px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 20px auto; /* Canh giữa thẻ trong phần preview */
+    background-image: linear-gradient(to right, #e0f2f7, #ffffff); /* Nền nhẹ nhàng */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.university-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.university-info {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.university-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0056b3;
+    margin: 0;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.card-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.student-photo {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    flex-shrink: 0; /* Đảm bảo ảnh không bị co lại */
+}
+
+.student-details {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.student-details p {
+    margin: 0;
+    padding: 2px 0;
+}
+
+.student-details strong {
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .form-section, .card-preview {
+        min-width: unset;
+        width: 100%;
+    }
+    .student-card {
+        width: 100%; /* Thẻ có thể co giãn trên màn hình nhỏ */
+        max-width: 350px; /* Giới hạn kích thước tối đa */
+    }
+}

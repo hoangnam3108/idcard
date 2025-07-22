@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Thẻ Sinh Viên Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trình Tạo Thẻ Sinh Viên Việt Nam</h1>
+
+        <div class="form-section">
+            <h2>Nhập thông tin sinh viên</h2>
+            <div class="input-group">
+                <label for="university">Tên Trường Đại Học:</label>
+                <select id="university">
+                    <option value="DaiHocQuocGiaHCM">Đại học Quốc gia TP.HCM</option>
+                    <option value="DaiHocBachKhoaHN">Đại học Bách Khoa Hà Nội</option>
+                    <option value="DaiHocCanTho">Đại học Cần Thơ</option>
+                    <option value="DaiHocKinhTeQuocDan">Đại học Kinh tế Quốc dân</option>
+                    </select>
+            </div>
+            <div class="input-group">
+                <label for="studentName">Họ và Tên:</label>
+                <input type="text" id="studentName" placeholder="Nguyễn Văn A">
+            </div>
+            <div class="input-group">
+                <label for="dob">Ngày Sinh:</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="input-group">
+                <label for="studentId">Mã Số Sinh Viên:</label>
+                <input type="text" id="studentId" placeholder="20123456">
+            </div>
+            <div class="input-group">
+                <label for="course">Ngành Học:</label>
+                <input type="text" id="course" placeholder="Công nghệ thông tin">
+            </div>
+            <div class="input-group">
+                <label for="department">Khoa:</label>
+                <input type="text" id="department" placeholder="Khoa Khoa học Máy tính">
+            </div>
+            <div class="input-group">
+                <label for="validity">Ngày Hết Hạn (MM/YYYY):</label>
+                <input type="text" id="validity" placeholder="12/2026">
+            </div>
+            <div class="input-group">
+                <label for="studentPhoto">Ảnh Sinh Viên:</label>
+                <input type="file" id="studentPhoto" accept="image/*">
+            </div>
+            <button id="generateCard">Tạo Thẻ Sinh Viên</button>
+        </div>
+
+        <div class="card-preview">
+            <h2>Xem trước thẻ sinh viên</h2>
+            <div id="studentCard" class="student-card">
+                <div class="card-header">
+                    <img src="placeholder-logo.png" alt="University Logo" class="university-logo" id="cardUniversityLogo">
+                    <div class="university-info">
+                        <p class="university-name" id="cardUniversityName">Tên Trường Đại Học</p>
+                        <p class="card-title">THẺ SINH VIÊN</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <img src="default-avatar.png" alt="Student Photo" class="student-photo" id="cardStudentPhoto">
+                    <div class="student-details">
+                        <p><strong>Họ và Tên:</strong> <span id="cardStudentName"></span></p>
+                        <p><strong>Ngày Sinh:</strong> <span id="cardDob"></span></p>
+                        <p><strong>Mã Số SV:</strong> <span id="cardStudentId"></span></p>
+                        <p><strong>Ngành:</strong> <span id="cardCourse"></span></p>
+                        <p><strong>Khoa:</strong> <span id="cardDepartment"></span></p>
+                        <p><strong>Giá trị đến:</strong> <span id="cardValidity"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
